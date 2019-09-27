@@ -30,7 +30,16 @@ class ClienteControlador extends Controller
     {   
         //$clientes = $this->clientes;
         $clientes = session('clientes');
-        return view('clientes.index', compact(['clientes']));
+        $titulo = 'Todos os clientes';
+        return view('clientes.index', 
+            ['clientes' => $clientes, 'titulo'=>$titulo]); //Aqui um array associativo
+        //return view('clientes.index', compact(['clientes', 'titulo'])); //Aqui retorna um array associativo
+        /*
+        return view('clientes.index')
+            ->with('clientes', $clientes)
+            ->('titulo', $texto);
+        */
+        //return view('clientes.index', compact(['clientes']));
     }
 
     /**
