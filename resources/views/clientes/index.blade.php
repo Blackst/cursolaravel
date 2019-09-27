@@ -1,3 +1,7 @@
+@extends('layouts.principal')
+
+@section('conteudo')
+    
 
 <h1>Clientes:</h1>
 
@@ -25,3 +29,5 @@
     <h4>Nenhum cliente cadastrado</h4>
 
 @endif
+
+@endsection
