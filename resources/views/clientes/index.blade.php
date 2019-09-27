@@ -3,6 +3,8 @@
 
 <a href="{{route('clientes.create')}}">Novo Cliente</a>
 
+@if (count($clientes) > 0)
+
 <ol>
     @foreach ($clientes as $c)
         <li>
@@ -17,3 +19,9 @@
         </li>
     @endforeach
 </ol>
+
+@else
+
+    <h4>Nenhum cliente cadastrado</h4>
+
+@endif
