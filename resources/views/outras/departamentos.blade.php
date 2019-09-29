@@ -12,4 +12,8 @@
         <li>Acessórios</li>
         <li>Roupas</li>
     </ul>
+
+@component('components.alerta')//Card do produto
+@endcomponent
+
 @endsection
