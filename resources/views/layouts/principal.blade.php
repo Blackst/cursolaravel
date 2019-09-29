@@ -12,9 +12,10 @@
         <div class="col1">
             <div class="menu">
                 <ul>
-                <li><a class="active" href="{{route('clientes.index')}}">Clientes</a></li>
-                    <li><a href="">Produtos</a></li>
-                    <li><a href="">Departamentos</a></li>
+                  <!--O * no clientes.* é para tudo que for relacionado a clientes marque como ativo e o link fique marcado.-->
+                <li><a class="{{request()->routeIS('clientes.*') ? 'active' : ''}}" href="{{route('clientes.index')}}">Clientes</a></li>
+                <li><a class="{{request()->routeIS('produtos') ? 'active' : ''}}" href="{{route('produtos')}}">Produtos</a></li>
+                <li><a class="{{request()->routeIS('departamentos') ? 'active' : ''}}" href="{{route('departamentos')}}">Departamentos</a></li>
                 </ul>
             </div>
         </div>
