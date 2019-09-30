@@ -13,9 +13,10 @@
             <div class="menu">
                 <ul>
                   <!--O * no clientes.* é para tudo que for relacionado a clientes marque como ativo e o link fique marcado.-->
-                <li><a class="{{request()->routeIS('clientes.*') ? 'active' : ''}}" href="{{route('clientes.index')}}">Clientes</a></li>
-                <li><a class="{{request()->routeIS('produtos') ? 'active' : ''}}" href="{{route('produtos')}}">Produtos</a></li>
-                <li><a class="{{request()->routeIS('departamentos') ? 'active' : ''}}" href="{{route('departamentos')}}">Departamentos</a></li>
+                <li><a class="{{request()->routeIs('clientes.*') ? 'active' : ''}}" href="{{route('clientes.index')}}">Clientes</a></li>
+                <li><a class="{{request()->routeIs('produtos') ? 'active' : ''}}" href="{{route('produtos')}}">Produtos</a></li>
+                <li><a class="{{request()->routeIs('departamentos') ? 'active' : ''}}" href="{{route('departamentos')}}">Departamentos</a></li>
+                <li><a class="{{request()->routeIs('opcoes') ? 'active' : ''}}" href="{{route('opcoes')}}">Opcoes</a></li>
                 </ul>
             </div>
         </div>
